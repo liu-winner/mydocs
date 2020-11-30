@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -58,7 +58,7 @@
       
         
         <a href="#hash" class="md-skip">
-          Skip to content
+          跳转至
         </a>
       
     </div>
@@ -102,7 +102,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -115,7 +115,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            正在初始化搜索引擎
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -213,7 +213,7 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
     
@@ -221,7 +221,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      目录
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
@@ -250,19 +250,25 @@
     引入2
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="引入2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#1_1" class="md-nav__link">
     方法1
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#2-" class="md-nav__link">
     方法2-哈希算法
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -324,7 +330,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
     
@@ -332,7 +338,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      目录
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
@@ -361,19 +367,25 @@
     引入2
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="引入2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#1_1" class="md-nav__link">
     方法1
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#2-" class="md-nav__link">
     方法2-哈希算法
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -436,16 +448,16 @@
 <p>给定 <span class="arithmatex">\(n\)</span> 个正整数，这些正整数的值域均为 <span class="arithmatex">\([1,10^9)\)</span>，让你把这些数去重后按从小到大排序后输出。</p>
 <hr />
 <p>这题发现值域到了 <span class="arithmatex">\(10^9\)</span>，很明显无法用桶排来做。</p>
-<h2 id="1_1">方法1<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h2>
+<h3 id="1_1">方法1<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
 <p>用STL-unique来写，时间复杂度大概为 <span class="arithmatex">\(O(n)\)</span>，可以过。</p>
 <hr />
 <p>不过大部分题目都无法用unique，就有了新的算法-哈希。</p>
-<h2 id="2-">方法2-哈希算法<a class="headerlink" href="#2-" title="Permanent link">&para;</a></h2>
+<h3 id="2-">方法2-哈希算法<a class="headerlink" href="#2-" title="Permanent link">&para;</a></h3>
 <p>我们用一个函数 <span class="arithmatex">\(H\)</span>，将一个很大的数 <span class="arithmatex">\(x\)</span> 变为一个可以用数组存下的数。</p>
 <p>一般都将哈希函数 <span class="arithmatex">\(H(x)\)</span> 定义为 <span class="arithmatex">\(x\bmod P\)</span>（<span class="arithmatex">\(P\)</span>为一个质数）。</p>
 <p>最后将哈希之后的数做桶排即可。</p>
 <h2 id="_2">哈希冲突<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>我们发现如果两个数 <span class="arithmatex">\(x,y\)</span> 使 <span class="arithmatex">\(H(x)=H(y)\)</span>，此时发现哈希之后冲突了，答案就错误。此时就叫**哈希冲突**、</p>
+<p>我们发现如果两个数 <span class="arithmatex">\(x,y\)</span> 使 <span class="arithmatex">\(H(x)=H(y)\)</span>，此时发现哈希之后冲突了，答案就错误。此时就叫 <strong>哈希冲突</strong>。</p>
 <h2 id="_3">解决哈希冲突<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>我们用一个链表处理 <span class="arithmatex">\(0\sim P-1\)</span> 的模数情况。即，将 <span class="arithmatex">\(x\)</span> 插入到 <span class="arithmatex">\(H(x)\)</span> 的链表下。</p>
 <p>每次插入时遍历 <span class="arithmatex">\(H(x)\)</span> 的链表，如果没有重复就插入，否则就不插入链表。</p>
@@ -708,7 +720,7 @@ H(a)=\sum_{i=1}^{6}{a_i}
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
-                  Previous
+                  上一页
                 </span>
                 About
               </div>
@@ -736,7 +748,7 @@ H(a)=\sum_{i=1}^{6}{a_i}
     </div>
     
       <script src="../assets/javascripts/vendor.fd16492e.min.js"></script>
-      <script src="../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
